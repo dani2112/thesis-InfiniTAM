@@ -29,7 +29,6 @@ INCLUDE(${PROJECT_SOURCE_DIR}/cmake/UseOpenNI.cmake)
 INCLUDE(${PROJECT_SOURCE_DIR}/cmake/UseRealSense.cmake)
 INCLUDE(${PROJECT_SOURCE_DIR}/cmake/UseRealSense2.cmake)
 INCLUDE(${PROJECT_SOURCE_DIR}/cmake/UseUVC.cmake)
-INCLUDE(${PROJECT_SOURCE_DIR}/cmake/UseRos.cmake)
 
 
 #############################
@@ -49,7 +48,6 @@ OpenNIEngine.cpp
 PicoFlexxEngine.cpp
 RealSenseEngine.cpp
 RealSense2Engine.cpp
-RosEngine.cpp
 )
 
 SET(headers
@@ -65,7 +63,6 @@ OpenNIEngine.h
 PicoFlexxEngine.h
 RealSenseEngine.h
 RealSense2Engine.h
-RosEngine.h
 )
 
 #############################
@@ -79,6 +76,3 @@ SOURCE_GROUP("" FILES ${sources} ${headers})
 ##########################################
 
 INCLUDE(${PROJECT_SOURCE_DIR}/cmake/SetCUDALibTarget.cmake)
-
-message(${catkin_LIBRARIES})
-TARGET_LINK_LIBRARIES(${targetname} ${catkin_LIBRARIES})
